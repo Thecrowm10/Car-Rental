@@ -168,14 +168,14 @@ padding-left: 9vw;
     background-color: transparent;
 }
 .window{
-    height: 115vh;
+    height: 130vh;
     width: 100vw;
-    background-color: white;
+    background-color:white;
     display: grid;
     grid-template-columns:auto auto auto;
     grid-template-rows: auto auto auto;
     
-      align-content:end;  
+      align-content:center;  
       
 }
 .win-hd{
@@ -184,16 +184,38 @@ padding-left: 9vw;
 .win-hd p{
     padding-top: 10px;
     padding-bottom: 90px;
-    padding-left: 30vw;
-    font-size: xx-large;
+    padding-left: 25vw;
+    font-size: 3em;
+    color: black;
 
     
 }
 .win{
     height: 30vh;
     width: 30vw;
-    border: 1px solid whitesmoke;
-    background-color:whitesmoke;
+    border: transparent;
+    background-color:#cdcbd6;
     margin: 0 20px 20px  20px ;   
+    border-radius: 8px;
+    cursor: pointer;
 }
-
+.win:hover{
+    box-shadow:10px 10px 7px black;
+    
+}
+.win i{
+    color: black;
+}
+.win h8{
+    font-size: 1.5em;
+    padding-left: 30px;
+  color: black;
+  cursor: pointer;
+  font-style: oblique;
+}
+.win p{
+font-size: 1em;
+padding-top: 40px;
+padding-left: 30px;
+color: rgb(59, 52, 52);
+}
