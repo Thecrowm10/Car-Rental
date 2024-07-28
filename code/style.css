@@ -71,6 +71,8 @@ padding-left: 9vw;
     color: white;
     margin-top: 1.5vh;
     border: 1px solid rgb(230, 26, 26);
+    transition: all 0.9s;
+    cursor: pointer;
 }
 .hd1 button:hover{
     background-color: transparent;
@@ -78,15 +80,16 @@ padding-left: 9vw;
 }
 .bar{
     height: 95vh;
-    margin-top: -4vh;
+    padding-top: 80px;
     width: 37vw;
     background-color:rgba(136, 127, 127, 0.2);
     margin-left: 8vw;
 }
 .bar label{
     font-size: x-large;
-    padding: 3em 0 1.5em 4.5em;
+    padding: 3em 0 2em 4.5em;
     color: white;
+    gap: 20px;
 }
 .bar-1{
     height: 7vh;
@@ -163,6 +166,8 @@ padding-left: 9vw;
     border-radius: 4px;
     background-color:rgb(230, 26, 26);
     color: white;
+    cursor: pointer;
+    transition: all 0.9s;
 }
 .bar-but button:hover{
     background-color: transparent;
@@ -170,7 +175,7 @@ padding-left: 9vw;
 .window{
     height: 130vh;
     width: 100vw;
-    background-color:white;
+    background-color:rgb(243, 235, 235);
     display: grid;
     grid-template-columns:auto auto auto;
     grid-template-rows: auto auto auto;
@@ -196,8 +201,10 @@ padding-left: 9vw;
     border: transparent;
     background-color:#cdcbd6;
     margin: 0 20px 20px  20px ;   
+    padding: 20px 10px 5px 20px;
     border-radius: 8px;
     cursor: pointer;
+    transition: box-shadow 0.8s;
 }
 .win:hover{
     box-shadow:10px 10px 7px black;
@@ -209,13 +216,120 @@ padding-left: 9vw;
 .win h8{
     font-size: 1.5em;
     padding-left: 30px;
+    font-weight: 400;
   color: black;
   cursor: pointer;
   font-style: oblique;
 }
 .win p{
 font-size: 1em;
-padding-top: 40px;
+padding-top: 30px;
 padding-left: 30px;
 color: rgb(59, 52, 52);
 }
+.details{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(243, 235, 235);
+}
+.details-bar{
+    display: flex;
+    height: 80vh;
+
+    width: 100vw;
+}
+.details-pic img{
+    height: 100%;
+    width: 50vw;
+}
+.details-text h5{
+    font-size: 3rem;
+    padding: 100px 0px 20px 40px;
+}
+.details-text b{
+    font-size: 1.2em;
+    margin: 10px 0px 0px 40px;
+    background-color: #222222;
+    color: #cdcbd6;
+}
+.details-text p{
+padding: 20px 0px 0px 40px;
+font-size: 1em;
+color: rgb(97, 92, 92);
+}
+.details-text button{
+    height: 7VH;
+    width: 12vw;
+    margin: 10px 0px 0px 40px ;
+    cursor: pointer;
+    background-color: #222222;
+    color: #cdcbd6;
+    border: 1px solid #222222;
+    border-radius: 5px;
+    transition: all 0.9s;
+}
+.details-text button:hover{
+background-color: transparent;
+color: #222222;
+}
+.choose{
+    height: 110vh;
+    width: 100vw;
+    background-color:rgb(243, 235, 235);
+}
+.choose-hd h5{
+    font-size: 3em;
+    text-align: center;
+}
+.choose-hd p{
+    font-size: 1.2em;
+    margin: 15px 450px 10px 460px;
+    background-color: #222222;
+    color: white;
+}
+.choose-bar{
+    display: flex;
+    height: 60vh;
+    width: 90vw;
+    margin-top: 60px;
+    margin-left: 60px;
+    background-color:rgb(243, 235, 235) ;
+}
+.choose-text{
+    height: 60vh;
+    width: 50vw;
+}
+.choose-text-hd{
+    font-size: 3em;
+}
+.choose-text b{
+    padding-left:430px;
+    font-size: xx-large;
+    color:rgb(230, 26, 26) ;
+}
+.choose-text p{
+    margin: 20px 0px 20px 0px;
+    color: rgb(97, 92, 92);
+}
+.choose-text li{
+    list-style: none;
+    padding:8px 0px 0px 8px;  
+}
+.choose-text button{
+    height: 7vh;
+    width: 15vw;
+    margin-top: 30px;
+    background-color: #222222;
+    color: white;
+    border: 1px solid #222222;
+    transition: all 0.9s;
+}
+.choose-text button:hover{
+    background-color: transparent;
+    color: #222222;
+}
+.choose-pic img{
+    height: 100%;
+    width: 100%;
+}
+
