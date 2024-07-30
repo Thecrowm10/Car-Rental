@@ -300,7 +300,7 @@ color: #222222;
     width: 50vw;
 }
 .choose-text-hd{
-    font-size: 3em;
+    font-size: 2em;
 }
 .choose-text b{
     padding-left:430px;
@@ -333,3 +333,19 @@ color: #222222;
     width: 100%;
 }
 
+.numbers{
+    height: 60vh;
+    width: 100vw;
+     background-color :#f9b700;
+     display: flex;
+}
+.number-hd {
+height: 100%;
+width: 20vw;
+text-align: center;
+padding-top: 150px;
+}
+.number-hd b{
+font-size: 3.5em;
+color: #111010;
+}
