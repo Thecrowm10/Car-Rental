@@ -461,11 +461,10 @@ color: #111010;
         height: 170vh;
         width: 100vw;
         top: -39vh;
-        background-color: #f3f4f8;   
+        background-color:rgb(243, 235, 235);   
         z-index: 2;
     }
     .blog-hd1{
-        font-family:"Playfair Display",serif ;
         font-size: 3em;
         text-align: center;
         padding-top: 120px;
@@ -475,7 +474,7 @@ color: #111010;
         font-family:"Playfair Display",serif ;
         text-align: center;
         padding: 20px 0px 40px 0px;
-        color: #fc456a;
+        color:#222222;
     }
     .blog-block{
     
@@ -486,15 +485,15 @@ color: #111010;
         
     }
     .blog-area{
-        height:100vh ;
-        width:30vw;
+        height:80vh ;
+        width:24vw;
         background-color: white;
         border: 1px solid white;
         border-radius: 7px;
     }
     .blg-pic img{
     width:100%;
-    height: 60vh;
+    height: 40vh;
     border-radius: 6px;
     }
     .blg-text{
