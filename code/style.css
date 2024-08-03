@@ -485,16 +485,18 @@ color: #111010;
         
     }
     .blog-area{
-        height:80vh ;
+        margin-top: 30px;
+        height:90vh ;
         width:24vw;
         background-color: white;
         border: 1px solid white;
         border-radius: 7px;
+    
     }
     .blg-pic img{
     width:100%;
-    height: 40vh;
-    border-radius: 6px;
+    height: 50vh;
+border-radius: 6px;
     }
     .blg-text{
         text-align: center;
@@ -509,7 +511,7 @@ color: #111010;
         transition: all 0.5s;
     }
     .blg-text-hd1:hover{
-        color: #fc456a;
+        color:rgb(230, 26, 26);
     }
     .blg-date{ 
     padding: 10px;
@@ -519,7 +521,7 @@ color: #111010;
     
     }
     .blg-text-hd2{
-        color: #fc456a;
+        color: rgb(230, 26, 26);
         transition: all 0.5s;
     }
     .blg-text-hd2:hover{
@@ -527,14 +529,14 @@ color: #111010;
     }
     .blg-admin{
         padding: 0px 3px 0px 3px;
-        color: #fc456a;
+        color: rgb(230, 26, 26);
         transition: all 0.5s;
     }
     .blg-admin:hover{
         color: black;
     }
     .msg{
-        color: #fc456a;
+        color: rgb(230, 26, 26);
         transition: 0.5s;
     }
     .msg:hover{
