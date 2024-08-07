@@ -70,6 +70,7 @@ padding-left: 9vw;
 .hd1 p{
     margin-top: 5vh;
     font-style:oblique;
+    background-color: rgb(59, 58, 58, 0.2);
     font-size: 1.1em;
 
 }
@@ -78,7 +79,7 @@ padding-left: 9vw;
     width: 12vw;
     background-color:rgb(230, 26, 26);
     color: white;
-    margin-top: 1.5vh;
+    margin-top: 5vh;
     border: 1px solid rgb(230, 26, 26);
     transition: all 0.9s;
     cursor: pointer;
@@ -332,6 +333,7 @@ color: #222222;
     color: white;
     border: 1px solid #222222;
     transition: all 0.9s;
+    cursor: pointer;
 }
 .choose-text button:hover{
     background-color: transparent;
@@ -815,3 +817,39 @@ z-index: 2;
         font-size: 1em;
         cursor: pointer;
     }
+
+
+
+    /* ABOUT PAGE CODE */
+.about-pic{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% 70%;
+    position: relative;
+    z-index: 1;
+}
+.about-hd{
+    text-align: center;
+    padding-top: 130px;
+    font-size: 4rem;
+    color: white;
+}
+.about-txt{
+    padding-left: 550px;
+    font-size: xx-large;
+    color: white;
+}
+.about-txt a{
+    color: white;
+    text-decoration: none;
+    padding-top: 10px;
+}
+.about-details{
+    height: 100vh;
+    margin-top: -30vh;
+    width: 100vw;
+    background-color:rgb(243, 235, 235);
+}
