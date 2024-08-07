@@ -688,6 +688,7 @@ width: 100vw;
 background-size: 100% 100%;
 background-attachment: fixed;
 position: relative;
+z-index: 2;
 }
 .log-form{
     margin-left: 400px;
@@ -696,6 +697,7 @@ position: relative;
     height: 80vh;
     border-radius: 10px;
     width: 40vw;
+    z-index: 1;
 }
 .log-form h1{
     text-align: center;
@@ -734,14 +736,22 @@ position: relative;
     margin-top: 40px;
     color: white;
 }
-.reg{
+.sp{
+    margin-left:550px ;
+    color: white;
+
+}
+.reg button{
     background-color: transparent; 
     border: none;
     color: white;
     font-size: 1em;
     cursor: pointer;
 }
-
+.message{
+    margin-left:300px ;
+    color: red;
+}
 /* code for register form */
 .reg-pic{
     background-image: url('../images/back.jpg');
@@ -792,11 +802,12 @@ position: relative;
         background-color: transparent;
         color: white;
     }
-    .reg-form span{
-        margin-left:170px ;
-        margin-top: 40px;
+    .logg{
+        margin-left:180px ;
         color: white;
+    
     }
+     
     .loog{
         background-color: transparent; 
         border: none;

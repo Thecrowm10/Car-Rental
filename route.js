@@ -4,15 +4,15 @@ const mysql_connect=require("./mysql_connector")
 const connection = require('./mysql_connector')
 router.get("/", (req,res)=>
 {
-    res.render("login")
+    res.render("index")
     res.end()
 }
 )
 router.use("/login",(req,res)=>
     {
         if(req.method==='GET'){
-            res.render()
-            res.end()
+            res.render("login")
+            res.end() 
         }
         else{
             mysql_connect.getConnection((err,connection)=>
@@ -23,10 +23,10 @@ router.use("/login",(req,res)=>
                     res.end()
                 }
                 else{
-                    var username=req.body.username
+                    var email=req.body.email
                 var password=req.body.password
-    const q=`insert into login (username,password)values('${username}','${password}')`
-    connection.query(q,(err)=>
+    const q=`select * from register where email='${email}'& password='${password}'`
+    connection.query(q,(err,data)=>
     {
         if(err){
             connection.release()
@@ -34,8 +34,16 @@ router.use("/login",(req,res)=>
                     res.end()
         }
         else{
-            res.render('index',{message:username+" Added Successfully"})
-        } res.end()
+                 if(data.length>0)
+                 {
+                    res.render("index")
+                    res.end()
+                 }
+                 else 
+                 {
+                  res.render('login',{message:"incorrect password"})
+                 }
+        } 
     })
                     }
             })

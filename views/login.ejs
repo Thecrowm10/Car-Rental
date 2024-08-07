@@ -9,14 +9,21 @@
 </head>
 <body>
     <div class="back-pic">
-         <form action="/login" method="post" class="log-form">
+        <div class="log-form">
+         <form action="/login" method="post" >
             <h1>Welcome To Car Rental</h1>
-            <input type="text" name="username"  placeholder="  Username" ><br><br>
-            <input type="password" name="password" placeholder="  password"><br><br>
-            <a href="/views/index.ejs" class="log"><button>Login</button></a><br><br>
-            <span>Don't have account?<a href="/views/register.ejs"><button class="reg"> Register</button></a></span>
+            <input type="email" name="username"  required placeholder="  Username" ><br><br>
+            <input type="password" name="password" required placeholder="  password"><br><br>
+            <a href="/index" class="log"><button>Login</button></a><br><br>
+           
          </form>
-         
+         <span class="sp">Don't have account?<a href="/register"class="reg"><button >Register</button></a></span>
+         <% if(locals.message)
+         {%>
+     <h4 class="message"><%=message%></h4>
+         <%}%>
+        </div>
     </div>
+   
 </body>
 </html>
