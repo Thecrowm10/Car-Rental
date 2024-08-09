@@ -751,8 +751,11 @@ z-index: 2;
     cursor: pointer;
 }
 .message{
-    margin-left:300px ;
-    color: red;
+    
+    margin: 20px 180px 0px 170px;
+    color:red;
+    background-color:#111010;
+    font-size: larger;
 }
 /* code for register form */
 .reg-pic{
@@ -838,7 +841,7 @@ z-index: 2;
     color: white;
 }
 .about-txt{
-    padding-left: 550px;
+    padding-left: 570px;
     font-size: xx-large;
     color: white;
 }
@@ -853,3 +856,79 @@ z-index: 2;
     width: 100vw;
     background-color:rgb(243, 235, 235);
 }
+
+
+/* services page style */
+
+.services-window{
+    height: 130vh;
+    width: 100vw;
+    margin-top: -30vh;
+    background-color:rgb(243, 235, 235);
+    display: grid;
+    grid-template-columns:auto auto auto;
+    grid-template-rows: auto auto auto;
+    
+      align-content:center;  
+      
+}
+.services-numbers{
+    height: 60vh;
+    width: 100vw;
+     background-color :#f9b700;
+     display: flex;
+     position: relative;
+     z-index: 2;
+}
+.services-pic-2{
+    margin-top: -199px;
+    height: 100vh;
+    background-image:url('../images/picc.jpeg');
+    background-position: center center;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+    width: 100vw;
+   position: relative;
+   z-index: 1;
+   padding-top: 15%;
+   text-align: center;
+   gap: 20px;
+}
+.services-pic-2-hd{
+    padding-top: 80px;
+    background-color:rgba(136, 127, 127, 0.2);
+    height: 60vh;
+    width: 100vw;  
+    
+}
+.services-pic-2-hd b{
+    font-size: 4em;
+    color: white;}
+.services-pic-2-hd p{
+        padding: 20px 0px 20px 0px;
+        color:aliceblue;
+    }
+.services-pic-2-bt button{
+        height: 50px;
+        width: 250px;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #517a8b;
+        color: white;
+        border: 1px solid #517a8b;
+        transition: all 0.5s;
+    }
+.services-pic-2-bt button:hover{
+        background-color: transparent;
+        color: #517a8b;
+    }
+    .services-end{
+        margin-top: -9vh;
+        position: relative;
+        height: 70vh;
+        width: 100vw;
+        z-index: 2;
+        background-color: #272727;
+        display: flex;
+        justify-content: space-around;
+    }

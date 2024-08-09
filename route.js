@@ -23,9 +23,9 @@ router.use("/login",(req,res)=>
                     res.end()
                 }
                 else{
-                    var email=req.body.email
+                    var email=req.body.username
                 var password=req.body.password
-    const q=`select * from register where email='${email}'& password='${password}'`
+    const q=`select * from register where email='${email}' and password='${password}'`
     connection.query(q,(err,data)=>
     {
         if(err){
@@ -41,7 +41,7 @@ router.use("/login",(req,res)=>
                  }
                  else 
                  {
-                  res.render('login',{message:"incorrect password"})
+                  res.render('login',{message:"  incorrect password"})
                  }
         } 
     })
@@ -90,6 +90,11 @@ router.use("/login",(req,res)=>
 router.use("/about",(req,res)=>
 {
     res.render("about")
+    res.end()
+})
+router.use("/services",(req,res)=>
+{
+    res.render("services")
     res.end()
 })
 module.exports = router; 
