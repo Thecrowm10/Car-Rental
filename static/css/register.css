@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #222222, #333);
+    overflow: hidden;
+}
+
+.register-wrapper {
+    display: flex;
+    height: 80vh;
+    width: 90vw;
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.register-image {
+    width: 50%;
+    background: url('../images/login.jpg') center/cover no-repeat;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: relative;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.8);
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.register-form-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #222222; /* Dark Grey */
+    padding: 40px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.register-form-container h1 {
+    font-size: 2.5em;
+    color: rgb(230, 26, 26); /* Bright Red */
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.register-form-container p {
+    color: #aaa; /* Light Grey */
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+.register-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-form input {
+    height: 45px;
+    padding: 0 15px;
+    border-radius: 8px;
+    border: 2px solid #555; /* Dark Grey */
+    outline: none;
+    font-size: 1em;
+    background: #333; /* Dark Grey */
+    color: #fff; /* White */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.register-form input:focus {
+    border-color: rgb(230, 26, 26); /* Bright Red */
+    transform: translateY(-5px);
+}
+
+.register-but button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 14px;
+    height: 6vh;
+    width: 28vw;
+    border-radius: 8px;
+    border: transparent;
+    background-color: rgb(230, 26, 26); /* Bright Red */
+    color: white;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    font-size: medium;
+}
+
+.register-but button:hover {
+    background-color: transparent;
+    color: rgb(230, 26, 26); /* Bright Red */
+    border: 1px solid rgb(230, 26, 26); /* Bright Red */
+}
+
+.login {
+    margin-top: 15px;
+    color: #ddd; /* Light Grey */
+}
+
+.login a {
+    color: rgb(230, 26, 26); /* Bright Red */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .register-wrapper {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .register-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .register-image {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .register-form-container {
+        width: 100%;
+        border-radius: 0;
+        padding: 30px;
+    }
+
+    .register-form-container h1 {
+        font-size: 2em;
+    }
+
+    .register-form-container p {
+        font-size: 0.9em;
+    }
+
+    .register-form input, .register-form button {
+        height: 40px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .register-form-container h1 {
+        font-size: 1.5em;
+    }
+
+    .register-form-container p {
+        font-size: 0.8em;
+    }
+
+    .register-form {
+        width: 90%;
+    }
+
+    .register-form input, .register-form button {
+        height: 35px;
+        font-size: 0.8em;
+    }
+}

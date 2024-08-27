@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cars</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <title>login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <div class="back-pic">
-        <div class="log-form">
-         <form action="/login" method="post" >
-            <h1>Welcome To Car Rental</h1>
-            <input type="email" name="username"  required placeholder="  Username" ><br><br>
-            <input type="password" name="password" required placeholder="  password"><br><br>
-            <a href="/index" class="log"><button>Login</button></a><br><br>
-           
-         </form>
-         <span class="sp">Don't have account?<a href="/register"class="reg"><button >Register</button></a></span>
-         <% if(locals.message)
-         {%>
-     <h4 class="message"><%=message%></h4>
-         <%}%>
-        </div>
-    </div>
-   
+  <div class="login-wrapper">
+      <div class="login-image"></div>
+      <div class="login-form-container" >
+          <h1>Welcome</h1>
+          <p>Sign in to manage your Cars and rentals.</p>
+          <form class="login-form " action="/login" method="post">
+              <input type="email" required placeholder="Email"  name="email" >
+              <input type="password" required placeholder="Password"  name="password">
+             <a href="/index" class="log-but"><button >Login</button></a> 
+          </form>
+          <p class="register">Don't have an account? <a href="/register">Register</a></p>
+          <% if(locals.message)
+          {%>
+      <h3 class="message"><%=message%></h3>
+          <%}%>
+      </div>
+     
+  </div>
+ 
 </body>
 </html>

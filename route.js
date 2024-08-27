@@ -4,7 +4,7 @@ const mysql_connect=require("./mysql_connector")
 const connection = require('./mysql_connector')
 router.get("/", (req,res)=>
 {
-    res.render("index")
+    res.render("login")
     res.end()
 }
 )
@@ -23,7 +23,7 @@ router.use("/login",(req,res)=>
                     res.end()
                 }
                 else{
-                    var email=req.body.username
+                    var email=req.body.email
                 var password=req.body.password
     const q=`select * from register where email='${email}' and password='${password}'`
     connection.query(q,(err,data)=>
@@ -66,11 +66,10 @@ router.use("/login",(req,res)=>
                     }
                     else{
                         var name=req.body.name
-                        var username=req.body.username
                         var email=req.body.email
                     var password=req.body.password
                     var confirm_password=req.body.confirm_password
-        const q=`insert into register (name,username,email,password,confirm_password)values('${name}','${username}','${email}','${password}','${confirm_password}')`
+        const q=`insert into register (name,email,password,confirm_password)values('${name}','${email}','${password}','${confirm_password}')`
         connection.query(q,(err)=>
         {
             if(err){
@@ -79,7 +78,7 @@ router.use("/login",(req,res)=>
                         res.end()
             }
             else{
-                res.render('index',{message:username+" Added Successfully"})
+                res.render('login',{message:name+" Added Successfully"})
             }
         })
                         }
@@ -87,6 +86,11 @@ router.use("/login",(req,res)=>
             }  
         }
         )
+ router.use("/index",(req,res)=>
+ {
+     res.render("index")
+     res.end()
+ })
 router.use("/about",(req,res)=>
 {
     res.render("about")
@@ -97,4 +101,5 @@ router.use("/services",(req,res)=>
     res.render("services")
     res.end()
 })
+
 module.exports = router; 
