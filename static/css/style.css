@@ -679,180 +679,439 @@ font-family: "McLaren ",sans-serif;
 body {
     bottom: -39vh;
 }
-
-
-/* code for register form */
-.reg-pic{
-    background-image: url('../images/back.jpg');
-    background-repeat: no-repeat;
-    height:100vh;
-    width: 100vw;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    position: relative;
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    .reg-form{
-        margin-left: 400px;
-        padding-top: 20px;
-        background-color: rgba(136, 127, 127, 0.1);
-        height: 90vh;
-        border-radius: 10px;
-        width: 40vw;
+    to {
+        opacity: 1;
     }
-    .reg-form h1{
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Transform animation */
+@keyframes transformScale {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.transform-scale {
+    animation: transformScale 0.6s ease-out;
+}
+
+/* Button hover effect */
+.button-hover {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-hover:hover {
+    transform: scale(1.05);
+    background-color: #517a8b;
+}
+
+/* Fade effect for images and blocks */
+.image-fade {
+    transition: opacity 0.5s ease;
+}
+
+.image-fade:hover {
+    opacity: 0.8;
+}
+
+/* Apply fade-in animation to elements */
+.pic, .pic-2, .feedback, .blog, .choose {
+    animation: fadeIn 1s ease-in;
+}
+
+.nav-bar, .hd1, .bar, .details-bar, .choose-bar, .blog-block, .details-text {
+    animation: transformScale 0.6s ease-out;
+}
+
+.nav-bar-col2 a {
+    transition: color 0.4s, text-decoration 0.4s;
+}
+
+.nav-bar-col2 a:hover {
+    color: rgb(230, 26, 26);
+    text-decoration: underline 2px solid rgb(230, 26, 26);
+}
+
+.hd1 button {
+    transition: background-color 0.9s, color 0.9s;
+}
+
+.hd1 button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.bar-but button {
+    transition: background-color 0.9s;
+}
+
+.bar-but button:hover {
+    background-color: transparent;
+}
+
+.feed, .win {
+    transition: box-shadow 0.8s;
+}
+
+.feed:hover, .win:hover {
+    box-shadow: 10px 10px 7px black;
+}
+
+.blog-area {
+    transition: transform 0.5s ease;
+}
+
+.blog-area:hover {
+    transform: scale(1.02);
+}
+
+.social button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+/* Base styles for mobile and small devices */
+@media (max-width: 767px) {
+    .nav-bar {
+        height: 10vh;
+        flex-direction: column;
+    }
+
+    .nav-bar-col2 {
+        display: block;
+        padding-top: 2vh;
+    }
+
+    .nav-bar-col2 ul {
+        display: block;
+        gap: 2vh;
+    }
+
+    .hd1 {
+        padding-left: 5vw;
         text-align: center;
-         font-size: 2.5em;
-         padding: 20px ;
-         color:white;
-    }
-    .reg-form input{
-        height: 6vh;
-        width: 20vw;
-        margin-left:130px ;
-        margin-bottom: 10px;
-        background-color: transparent;
-        border: 1px solid black;
-        color: white;
-        border-radius: 10px;
-    }
-    .reeg button{
-        height: 6vh;
-        width: 20vw;
-        margin-left:130px ;
-        background-color: white;
-        font-size: large;
-        color:black;
-        border: 1px solid white;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.6s;
-    }
-    .reeg button:hover{
-        background-color: transparent;
-        color: white;
-    }
-    .logg{
-        margin-left:180px ;
-        color: white;
-    
-    }
-     
-    .loog{
-        background-color: transparent; 
-        border: none;
-        color: white;
-        font-size: 1em;
-        cursor: pointer;
     }
 
+    .bar {
+        width: 100vw;
+        margin-left: 0;
+    }
+
+    .details-bar {
+        flex-direction: column;
+    }
+
+    .choose-bar {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .blog-block {
+        flex-direction: column;
+    }
+
+    .blog-area {
+        width: 90vw;
+        margin: 10px 0;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-bar {
+        height: 9vh;
+    }
+
+    .hd1 {
+        padding-left: 7vw;
+    }
+
+    .bar {
+        width: 50vw;
+    }
+
+    .choose-bar {
+        width: 80vw;
+    }
+}
 
 
     /* ABOUT PAGE CODE */
-.about-pic{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.about-pic {
     height: 100vh;
     width: 100vw;
     background-image: url('../images/back.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: 100% 70%;
+    background-size: 100% 70%; 
     position: relative;
     z-index: 1;
+    animation: fadeUpBackground 2s ease-in-out;
 }
-.about-hd{
+
+/* Fade-Up Animation for Background */
+@keyframes fadeUpBackground {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start with background slightly shifted down */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End with background in its final position */
+    }
+}
+
+/* About Heading */
+.about-hd {
     text-align: center;
     padding-top: 130px;
     font-size: 4rem;
     color: white;
+    animation: fadeUp 1.5s ease-in-out; 
 }
-.about-txt{
+
+/* Fade-Up Animation for Text */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about-txt {
     padding-left: 570px;
     font-size: xx-large;
     color: white;
+    animation: fadeUp 1.5s ease-in-out;
 }
-.about-txt a{
+
+.about-txt a {
     color: white;
     text-decoration: none;
     padding-top: 10px;
 }
-.about-details{
+.about-details {
     height: 100vh;
-    margin-top: -30vh;
     width: 100vw;
-    background-color:rgb(243, 235, 235);
+    background-color: rgb(243, 235, 235);
+    margin-top: -30vh; 
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 2s ease-in-out; 
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-txt {
+        padding-left: 10%; 
+        font-size: 1.5rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hd {
+        font-size: 2.5rem;
+        padding-top: 5%;
+    }
+
+    .about-txt {
+        font-size: 1.25rem;
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hd {
+        font-size: 1.5rem;
+        padding-top: 3%;
+    }
+
+    .about-txt {
+        font-size: 1rem;
+        padding-left: 2%;
+    }
 }
 
 
 /* services page style */
-
-.services-window{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.services-window {
     height: 130vh;
     width: 100vw;
     margin-top: -30vh;
-    background-color:rgb(243, 235, 235);
+    background-color: rgb(243, 235, 235);
     display: grid;
-    grid-template-columns:auto auto auto;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
-    
-      align-content:center;  
-      
+    align-content: center;
+    animation: fadeUp 2s ease-in-out; 
 }
-.services-numbers{
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.services-numbers {
     height: 60vh;
     width: 100vw;
-     background-color :#f9b700;
-     display: flex;
-     position: relative;
-     z-index: 2;
+    background-color: #f9b700;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 2s ease-in-out; 
 }
-.services-pic-2{
+.services-pic-2 {
     margin-top: -199px;
     height: 100vh;
-    background-image:url('../images/picc.jpeg');
+    background-image: url('../images/picc.jpeg');
     background-position: center center;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-size: 100% 100%;
     width: 100vw;
-   position: relative;
-   z-index: 1;
-   padding-top: 15%;
-   text-align: center;
-   gap: 20px;
+    position: relative;
+    z-index: 1;
+    padding-top: 15%;
+    text-align: center;
+    gap: 20px;
+    animation: fadeUp 2s ease-in-out; 
 }
-.services-pic-2-hd{
+.services-pic-2-hd {
     padding-top: 80px;
-    background-color:rgba(136, 127, 127, 0.2);
+    background-color: rgba(136, 127, 127, 0.2);
     height: 60vh;
-    width: 100vw;  
-    
+    width: 100vw;
+    animation: fadeUp 2s ease-in-out; 
 }
-.services-pic-2-hd b{
+.services-pic-2-hd b {
     font-size: 4em;
-    color: white;}
-.services-pic-2-hd p{
-        padding: 20px 0px 20px 0px;
-        color:aliceblue;
+    color: white;
+}
+
+.services-pic-2-hd p {
+    padding: 20px 0;
+    color: aliceblue;
+}
+.services-pic-2-bt button {
+    height: 50px;
+    width: 250px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #517a8b;
+    color: white;
+    border: 1px solid #517a8b;
+    transition: all 0.5s;
+}
+.services-pic-2-bt button:hover {
+    background-color: transparent;
+    color: #517a8b;
+}
+.services-end {
+    margin-top: -9vh;
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+    z-index: 2;
+    background-color: #272727;
+    display: flex;
+    justify-content: space-around;
+    animation: fadeUp 2s ease-in-out; 
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-window {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
     }
-.services-pic-2-bt button{
-        height: 50px;
-        width: 250px;
-        border-radius: 8px;
-        cursor: pointer;
-        background-color: #517a8b;
-        color: white;
-        border: 1px solid #517a8b;
-        transition: all 0.5s;
+
+    .services-pic-2-hd b {
+        font-size: 3em;
     }
-.services-pic-2-bt button:hover{
-        background-color: transparent;
-        color: #517a8b;
+
+    .services-pic-2-hd p {
+        font-size: 1.5rem;
     }
-    .services-end{
-        margin-top: -9vh;
-        position: relative;
-        height: 70vh;
-        width: 100vw;
-        z-index: 2;
-        background-color: #272727;
-        display: flex;
-        justify-content: space-around;
+
+    .services-pic-2-bt button {
+        width: 200px;
     }
+}
+
+@media (max-width: 768px) {
+    .services-window {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .services-pic-2-hd b {
+        font-size: 2.5em;
+    }
+
+    .services-pic-2-hd p {
+        font-size: 1.2rem;
+    }
+
+    .services-pic-2-bt button {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-pic-2-hd {
+        padding-top: 40px;
+    }
+
+    .services-pic-2-hd b {
+        font-size: 2em;
+    }
+
+    .services-pic-2-hd p {
+        font-size: 1rem;
+    }
+
+    .services-pic-2-bt button {
+        width: 120px;
+        height: 40px;
+    }
+}
