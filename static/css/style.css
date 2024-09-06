@@ -83,6 +83,7 @@ padding-left: 9vw;
     border: 1px solid rgb(230, 26, 26);
     transition: all 0.9s;
     cursor: pointer;
+    border-radius: 6px;
 }
 .hd1 button:hover{
     background-color: transparent;
