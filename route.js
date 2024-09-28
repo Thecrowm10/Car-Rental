@@ -101,5 +101,10 @@ router.use("/services",(req,res)=>
     res.render("services")
     res.end()
 })
+router.use("/contact",(req,res)=>
+    {
+        res.render("contact")
+        res.end()
+    })
 
 module.exports = router; 
