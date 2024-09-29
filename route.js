@@ -4,7 +4,7 @@ const mysql_connect=require("./mysql_connector")
 const connection = require('./mysql_connector')
 router.get("/", (req,res)=>
 {
-    res.render("login")
+    res.render("index")
     res.end()
 }
 )
@@ -106,5 +106,10 @@ router.use("/contact",(req,res)=>
         res.render("contact")
         res.end()
     })
+    router.use("/cars",(req,res)=>
+        {
+            res.render("cars")
+            res.end()
+        })
 
 module.exports = router; 

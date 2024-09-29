@@ -305,6 +305,11 @@ color: #222222;
     margin-top: 60px;
     margin-left: 60px;
     background-color:rgb(243, 235, 235) ;
+    transition: all 0.6s;
+    animation: ease;
+}
+.choose-bar:hover{
+    transform: scale(1.06);
 }
 .choose-text{
     height: 60vh;
@@ -1174,4 +1179,25 @@ margin-bottom: 3vh;
     padding-top: 10vh;
     height: 80vh;
     width: 100vw;
+}
+
+/*cars page styling*/
+.choose-car{
+    height: 300vh;
+    width: 100vw;
+    background-color:rgb(243, 235, 235);
+}
+.choose-bar-cars{
+    display: flex;
+    height: 60vh;
+    width: 90vw;
+    margin-top: 60px;
+    margin-left: 60px;
+    border: 1px solid white;
+    background-color:rgb(243, 235, 235) ;
+    transition: all 0.6s;
+    animation: ease;
+}
+.choose-bar-cars:hover{
+    transform: scale(1.06);
 }
